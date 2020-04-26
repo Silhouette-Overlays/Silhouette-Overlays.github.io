@@ -16,12 +16,12 @@ var time = containerDistance / 200000;
 var size = Math.round(Math.random() * 0.3) + 0.85;
 container.style.transition = time + 's linear';
 graphic.style.transition = time + 's linear';
-container.style.left = containerLeft + 'px';
-container.style.top = containerTop + 'px';
+container.style.left = 'calc(50vw - ' + containerLeft + 'px)';
+container.style.top = 'calc(50vh - ' + containerTop + 'px)';
 var graphicLeft = containerLeft * 1.3;
 var graphicTop = containerTop * 1.3;
-graphic.style.left = graphicLeft + 'px';
-graphic.style.top = graphicTop + 'px';
+graphic.style.left = 'calc(50vw - ' + graphicLeft + 'px)';
+graphic.style.top = 'calc(50vh - ' + graphicTop + 'px';
 graphic.style.transform = 'scale(' + size + ')';
 size = Math.round(Math.random() * 0.2) + 3;
 container.style.transform = 'scale(' + size + ')';
@@ -31,8 +31,8 @@ setTimeout(function() {
 }, time);
 
 function moveContainer() {
-	currentLeft = container.style.left.replace("px", "");
-	currentTop = container.style.top.replace("px", "");
+	currentLeft = containerLeft;
+	currentTop = containerTop;
 	while (containerLeft == currentLeft) {
 		containerLeft = Math.round(Math.random() * (container.clientWidth - 1) / 5) + 1 - (container.clientWidth / 2);
 	}
@@ -46,12 +46,12 @@ function moveContainer() {
 	size = Math.round(Math.random() * 0.3) + 0.85;
 	container.style.transition = time + 's linear';
 	graphic.style.transition = time + 's linear';
-	container.style.left = containerLeft + 'px';
-	container.style.top = containerTop + 'px';
+	container.style.left = 'calc(50vw - ' + containerLeft + 'px)';
+	container.style.top = 'calc(50vh - ' + containerTop + 'px)';
 	graphicLeft = containerLeft * 1.3;
 	graphicTop = containerTop * 1.3;
-	graphic.style.left = graphicLeft + 'px';
-	graphic.style.top = graphicTop + 'px';
+	graphic.style.left = 'calc(50vw - ' + graphicLeft + 'px)';
+	graphic.style.top = 'calc(50vh - ' + graphicTop + 'px';
 	graphic.style.transform = 'scale(' + size + ')';
 	size = Math.round(Math.random() * 0.2) + 3;
 	container.style.transform = 'scale(' + size + ')';
