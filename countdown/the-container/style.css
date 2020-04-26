@@ -1,0 +1,17 @@
+body {
+	margin: 0px;
+	font-family: dolcevita;
+}
+
+@font-face {
+    font-family: dolcevita;
+    src: url("./dolcevita.ttf") format("truetype");
+}
+
+#countdown {
+	text-align: center;
+	font-size: 15em;
+	line-height: 100vh;
+	color: white;
+	text-shadow: 0px 10px 0px black;
+}
