@@ -1,11 +1,11 @@
 body {
 	margin: 0px;
-	font-family: dolcevita;
+	font-family: sledge;
 }
 
 @font-face {
-    font-family: dolcevita;
-    src: url("./dolcevita.ttf") format("truetype");
+    font-family: sledge;
+    src: url("./sledge.otf") format("opentype");
 }
 
 #countdown {
