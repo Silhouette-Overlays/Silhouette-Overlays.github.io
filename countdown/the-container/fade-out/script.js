@@ -48,5 +48,5 @@ var deadline = new Date(now + left_to_hour + 100 * 24 * 60 * 60 * 1000);
 initializeClock('countdown', deadline);
 
 setTimeout(function() {
-	document.getElementById('countdown').style.opacity = 1;
+	document.getElementById('countdown').style.opacity = 0;
 }, 1000);
