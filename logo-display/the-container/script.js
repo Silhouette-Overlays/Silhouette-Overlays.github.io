@@ -4,5 +4,5 @@ window.onload = function() {
 		setTimeout(function() {
 			document.getElementById('logos').style.animation = 'none';
 		}, 1000);
-	}, 10000);
+	}, 25000);
 }
