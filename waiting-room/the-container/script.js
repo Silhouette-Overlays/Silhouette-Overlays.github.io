@@ -14,8 +14,8 @@ while (containerTop == container.style.top) {
 var containerDistance = (containerLeft - container.style.left) * (containerLeft - container.style.left) + (containerTop - container.style.top) * (containerTop - container.style.top);
 var time = Math.sqrt(containerDistance) / 30;
 var size = Math.round(Math.random() * 0.5) + 0.8;
-container.style.transition = time + 's linear';
-graphic.style.transition = time + 's linear';
+container.style.transition = time + 's ease';
+graphic.style.transition = time + 's ease';
 container.style.left = containerLeft + 'px';
 container.style.top = containerTop + 'px';
 var graphicLeft = containerLeft * 1.3;
@@ -44,8 +44,8 @@ function moveContainer() {
 	containerDistance = (containerLeft - currentLeft) * (containerLeft - currentLeft) + (containerTop - currentTop) * (containerTop - currentTop);
 	time = Math.sqrt(containerDistance) / 30;
 	size = Math.round(Math.random() * 0.5) + 0.8;
-	container.style.transition = time + 's linear';
-	graphic.style.transition = time + 's linear';
+	container.style.transition = time + 's ease';
+	graphic.style.transition = time + 's ease';
 	container.style.left = containerLeft + 'px';
 	container.style.top = containerTop + 'px';	
 	graphicLeft = containerLeft * 1.3;
