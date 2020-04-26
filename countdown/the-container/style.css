@@ -1,6 +1,7 @@
 body {
 	margin: 0px;
 	font-family: sledge;
+	letter-spacing: 0.1em;
 }
 
 @font-face {
