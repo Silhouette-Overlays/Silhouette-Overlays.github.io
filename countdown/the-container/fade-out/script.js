@@ -49,4 +49,4 @@ initializeClock('countdown', deadline);
 
 setTimeout(function() {
 	document.getElementById('countdown').style.opacity = 0;
-}, 1000);
+}, 4000);
