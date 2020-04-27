@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<audio id=sfx src="./low hum.wav"></audio>
+<script>
+var sfx = document.getElementById('sfx');
+setInterval(function() {
+	if (sfx.paused) {
+		sfx.play();
+	}
+}, 0);
+</script>
+</body>
+</html>
