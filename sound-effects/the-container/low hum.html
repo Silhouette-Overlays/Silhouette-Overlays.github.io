@@ -5,6 +5,7 @@
 <script>
 var sfx = document.getElementById('sfx');
 setInterval(function() {
+	sfx.loop = true;
 	if (sfx.paused) {
 		sfx.play();
 	}
