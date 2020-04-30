@@ -13,6 +13,22 @@ function getTimeRemaining(endtime) {
   };
 }
 
+function getParameterByName(name, url) {
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, '\\$&');
+	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+		results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var minuteOffset = getParameterByName('o');
+
+if (minuteOffset == null || minuteOffset == '') {
+	minuteOffset = 0;
+}
+
 function initializeClock(id, endtime) {
   var clock = document.getElementById(id);
   var daysSpan = clock.querySelector('.days');
@@ -22,8 +38,8 @@ function initializeClock(id, endtime) {
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
-	if (t['minutes'] < 50) {
-		minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+	if (t['minutes'] - minuteOffset < 50 && t['minutes'] > minuteOffset) {
+		minutesSpan.innerHTML = ('0' + (t.minutes - minuteOffset).slice(-2);
 		secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 	} else {
 		minutesSpan.innerHTML = '00';
