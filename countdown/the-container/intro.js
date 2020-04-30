@@ -22,8 +22,8 @@ function initializeClock(id, endtime) {
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
-	if (t['minutes'] < 50) {
-		minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+	if (t['minutes'] < 48 && t['minutes'] > 2) {
+		minutesSpan.innerHTML = ('0' + (t.minutes - 2)).slice(-2);
 		secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 	} else {
 		minutesSpan.innerHTML = '00';
