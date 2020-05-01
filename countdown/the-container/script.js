@@ -38,7 +38,7 @@ function initializeClock(id, endtime) {
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
-	if (t['minutes'] - minuteOffset < 50 && t['minutes'] >= minuteOffset) {
+	if (t['minutes'] - minuteOffset < 58 && t['minutes'] >= minuteOffset) {
 		minutesSpan.innerHTML = ('0' + (t.minutes - minuteOffset)).slice(-2);
 		secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 	} else {
