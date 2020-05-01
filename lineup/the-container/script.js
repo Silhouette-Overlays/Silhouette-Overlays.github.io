@@ -14,7 +14,7 @@ var i = 0;
 
 if (id != null && id != '') {
 	while (i + 1 <= id) {
-		document.getElementsByClassName('id')[i].style.opacity = 1;
+		document.getElementsByClassName('id')[i].style.opacity = 0.7;
 		i++;
 	}
 	window.onload = function() {
