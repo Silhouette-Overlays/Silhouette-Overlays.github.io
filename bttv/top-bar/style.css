@@ -1,0 +1,72 @@
+body {
+	margin: 0px;
+	overflow: hidden;
+}
+
+@font-face {
+	font-family: lemonmilk;
+	src: url("./LemonMilk.otf") format("opentype");
+}
+
+#bar {
+	height: 60px;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: rgba(0,0,0,0.85);
+	font-family: lemonmilk;
+	color: white;
+	font-size: 1.5em;
+	line-height: 30px;
+}
+
+#bt {
+	margin: 0px;
+	display: block;
+	position: absolute;
+	transition: left 0.2s, width 0.3s;
+	overflow: hidden;
+}
+
+#tv {
+	margin: 0px;
+	padding-left: 0px;
+	display: block;
+	position: absolute;
+	top: 30px;
+	transition: top 0.2s, left 0.3s;
+	text-stroke: 1px white;
+	-webkit-text-stroke: 1px white;
+	color: transparent;
+}
+
+#bt-text {
+	top: 60px;
+	position: fixed;
+	display: inline-block;
+	opacity: 0;
+}
+
+#bt-one, #bt-two {
+	width: 0px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#bt-one {
+	margin-right: -4px;
+}
+
+#bt-two {
+	margin-left: -4px;
+}
+
+#container {
+	transform: scale(1);
+	display: block;
+	position: fixed;
+	left: 10px;
+	top: -1px;
+	transition: transform 0.4s, top 0.15s, left 0.2s;
+}
